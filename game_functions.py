@@ -7,7 +7,7 @@ def handle_events(ambulance):
         if event.type == pygame.QUIT:
             return False
     
-    keys = pygame
+    keys = pygame.key.get_pressed()
     if keys[pygame.K_LEFT]:
         ambulance.move("left")
     if keys[pygame.K_RIGHT]:
@@ -26,7 +26,7 @@ def check_collision(ambulance, obstacles):
 
 def draw_objects(screen, ambulance, obstacles, score, background_y):
      screen.fill(GREEN)
-     pygame.draw.erct(screen, BLACK, (0, background_y % HEIGHT, WIDTH, HEIGHT))
+     pygame.draw.rect(screen, BLACK, (0, background_y % HEIGHT, WIDTH, HEIGHT))
      
      ambulance.draw(screen)
      

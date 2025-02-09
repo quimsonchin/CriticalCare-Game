@@ -9,15 +9,15 @@ class Ambulance:
         self.y = HEIGHT - 100 # set y position
         self.speed = AMBULANCE_SPEED
         
-        def move(self, direction):
-            if direction == "left" and self.x > 0:
-                self.x -= self.speed
-            if direction == "right" and self.x < WIDTH - 50:
-                self.x += self.speed
-            if direction == "up" and self.y > 0:
-                self.y -= self.speed
-            if direction == "down" and self.y < HEIGHT - 50:
-                self.y += self.speed
-                
-        def draw(self, screen):
-            screen.blit(self.image, (self.x, self.y))
+    def move(self, direction):
+        if direction == "left" and self.x > 0:
+            self.x -= self.speed
+        if direction == "right" and self.x < WIDTH - 50:
+            self.x += self.speed
+        if direction == "up" and self.y > 0:
+            self.y -= self.speed
+        if direction == "down" and self.y < HEIGHT - 50:
+            self.y += self.speed
+            
+    def draw(self, screen):
+        screen.blit(self.image, (self.x, self.y))
